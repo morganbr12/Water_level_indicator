@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import '../widgets/body_widget.dart';
 
+enum Status {
+  Pumping,
+  TurnedOff,
+}
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -10,6 +15,18 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late bool isTurnOn = false;
+
+  void isChanged(value) {
+    setState(() {
+      isTurnOn = value;
+
+      if (isTurnOn == true) {
+        Status.Pumping;
+      } else {
+        Status.TurnedOff;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +53,8 @@ class _HomePageState extends State<HomePage> {
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
+                children: [
+                  const Text(
                     "Status: ",
                     style: TextStyle(
                       fontSize: 25,
@@ -46,8 +63,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Text(
-                    "Pumping",
-                    style: TextStyle(
+                    '$isTurnOn',
+                    style: const TextStyle(
                       fontSize: 23,
                       color: Colors.grey,
                     ),
@@ -108,9 +125,7 @@ class _HomePageState extends State<HomePage> {
                 child: Switch(
                   value: isTurnOn,
                   onChanged: (value) {
-                    setState(() {
-                      isTurnOn = value;
-                    });
+                    isChanged(value);
                   },
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 ),
