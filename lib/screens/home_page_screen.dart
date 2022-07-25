@@ -39,41 +39,81 @@ class _HomePageState extends State<HomePage> {
     );
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.lightBlue,
       appBar: AppBar(
         title: title,
         centerTitle: true,
+        backgroundColor: Colors.black,
+        elevation: 2,
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+        ),
       ),
-      body: Container(
+      body: SizedBox(
         width: size.width,
         height: size.height,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    "Status: ",
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blue,
+            const SizedBox(
+              height: 30,
+            ),
+            SizedBox(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Pump Status: ",
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
                     ),
-                  ),
-                  Text(
-                    '$isTurnOn',
-                    style: const TextStyle(
-                      fontSize: 23,
-                      color: Colors.grey,
+                    Text(
+                      '$isTurnOn',
+                      style: const TextStyle(
+                        fontSize: 23,
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 30,
+            ),
+            SizedBox(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: const [
+                    Text(
+                      "Tank Level: ",
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      'Fillings',
+                      style: TextStyle(
+                        fontSize: 23,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 50,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -94,9 +134,9 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: const [
                     Text(
-                      "Temperature",
+                      "Water Temperature",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -107,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                       "32 °C",
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.blue,
+                        color: Colors.white,
                       ),
                     )
                   ],
@@ -116,6 +156,10 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(
               height: 30,
+            ),
+            const Text(
+              "Manual Switch",
+              style: TextStyle(fontSize: 18),
             ),
             SizedBox(
               height: 100,

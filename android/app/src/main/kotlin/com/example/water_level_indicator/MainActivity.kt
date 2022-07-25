@@ -1,4 +1,4 @@
-package com.example.water_level_indicator
+package com.dalystTek.water_level_indicator
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.water_level_indicator">
+    package="com.dalystTek.water_level_indicator">
    <application
         android:label="water_level_indicator"
         android:name="${applicationName}"

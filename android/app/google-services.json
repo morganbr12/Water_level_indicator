@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "162991065952",
+    "project_id": "water-level-indicator-300f4",
+    "storage_bucket": "water-level-indicator-300f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162991065952:android:db40b88cbad208b8f8ec05",
+        "android_client_info": {
+          "package_name": "com.dalystTek.water_level_indicator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162991065952-64d911knnt821i563geiaka64lnbgqvr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dalystTek.water_level_indicator",
+            "certificate_hash": "1117c7f3890db9878deb7b354d37f470090cd231"
+          }
+        },
+        {
+          "client_id": "162991065952-9tucoai00if4vrhn9nr8aduoesnrl3p3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfDKe2lO5WS3VOOLS_2uOppWM6OtE3l9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162991065952-9tucoai00if4vrhn9nr8aduoesnrl3p3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

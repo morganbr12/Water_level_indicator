@@ -26,7 +26,7 @@ class _NewBodyWidgetState extends State<NewBodyWidget>
         // actions here
       });
     });
-    animationController.repeat();
+    animationController.forward();
     super.initState();
   }
 
@@ -35,7 +35,7 @@ class _NewBodyWidgetState extends State<NewBodyWidget>
     final percentage = animationController.value * 100;
     return LiquidLinearProgressIndicator(
       value: animationController.value,
-      valueColor: const AlwaysStoppedAnimation(Colors.blue),
+      valueColor: const AlwaysStoppedAnimation(Colors.blueAccent),
       center: Text(
         '${percentage.toStringAsFixed(0)}%',
         style: const TextStyle(
